@@ -40,8 +40,12 @@ eventDistributor : EventDistributor
   translateSelections(dir: vec3, scale: number) {
     this.selections.forEach(index => {
       const pos = this.PointSpheres[index].getTransform().getWorldPosition();
-      this.builder.setVertexInterleaved(index, [pos.x + dir.x * scale, pos.y + dir.y * scale, pos.z + dir.z * scale]);
+      const arr = [pos.x + dir.x * scale, pos.y + dir.y * scale, pos.z + dir.z * scale];
+      const vec = new vec3(pos.x + dir.x * scale, pos.y + dir.y * scale, pos.z + dir.z * scale);
+      this.PointSpheres[index].getTransform().setWorldPosition(vec);
+      this.builder.setVertexInterleaved(index, arr);
     });
+    this.setMeshRender();
   }
 
   OffsetByDirection(State: any, CaliperSize: number) {
