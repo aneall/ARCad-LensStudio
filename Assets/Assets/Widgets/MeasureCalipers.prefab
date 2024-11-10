@@ -12,13 +12,15 @@
   ScriptAsset: !<reference> 3ca6df76-cb43-41d5-a1b3-47ce7b72eaf3
   ScriptInputsDefault:
     origin: true
-    extent: true
+    precission: true
+    directionVector: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
       origin: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      extent: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      precission: 3
+      directionVector: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
       text: !<reference.Text> fdc0129e-bb6d-4d1f-8a05-ffb4efe0f1ad
   ScriptTypes:
     "":

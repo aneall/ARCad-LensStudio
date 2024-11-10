@@ -1,0 +1,36 @@
+- !<AssetImportMetadata/8a7093ee-4fa0-4aea-811b-981000942c80>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 2c09e196-ea57-414a-8dab-15b3f9ab25e0
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 2c09e196-ea57-414a-8dab-15b3f9ab25e0
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    JavaScriptAsset: !<own> 8cde3ea6-5ae2-4289-82e2-89937b679c77
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings/26257a63-d621-459e-8092-d65f2f9e7abc>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/8cde3ea6-5ae2-4289-82e2-89937b679c77>
+  SvgIcon: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    meshVisual: false
+    spherePrefab: false
+  ScriptTypesHidden:
+    {}
+  DefaultScriptInputs:
+    - meshVisual: !<reference.RenderMeshVisual> 00000000-0000-0000-0000-000000000000
+      spherePrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}

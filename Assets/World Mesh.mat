@@ -1,0 +1,86 @@
+- !<Material/f1059e93-306e-4092-b0d4-98a8f907d4ce>
+  PackagePath: ""
+  PassesInfo:
+    - !<own> 8693d067-e008-49c2-82c4-877a06917a20
+- !<PassInfo/8693d067-e008-49c2-82c4-877a06917a20>
+  DepthWrite: true
+  DepthTest: true
+  DepthFunction: LessEqual
+  TwoSided: false
+  ColorMask: {x: true, y: true, z: true, w: true}
+  CullMode: Back
+  PolygonOffset: {x: 0.000000, y: 0.000000}
+  FrustumCulling: Auto
+  FrustumCullPad: 0.000000
+  InstanceCount: 1
+  Defines:
+    []
+  BlendMode: Disabled
+  Properties:
+    Port_Input0_N062:
+      typeIdx: 1
+      value: 1.100000
+    Port_Input1_N000:
+      typeIdx: 1
+      value: 2.000000
+    Port_Input1_N003:
+      typeIdx: 1
+      value: 7.000000
+    Port_Input1_N010:
+      typeIdx: 1
+      value: 3.000000
+    Port_Input1_N017:
+      typeIdx: 1
+      value: 2.000000
+    Port_Input1_N019:
+      typeIdx: 1
+      value: 0.330000
+    Port_Input1_N029:
+      typeIdx: 1
+      value: 1.250000
+    Port_Input1_N049:
+      typeIdx: 1
+      value: 0.100000
+    Port_Input1_N055:
+      typeIdx: 1
+      value: 2.000000
+    Port_Input1_N056:
+      typeIdx: 1
+      value: 0.500000
+    Port_Input1_N059:
+      typeIdx: 1
+      value: 555.000000
+    Port_Input1_N061:
+      typeIdx: 1
+      value: 0.000000
+    Port_Input2_N049:
+      typeIdx: 1
+      value: 1.000000
+    Port_Input2_N061:
+      typeIdx: 1
+      value: 1.000000
+    Port_Multiplier_N022:
+      typeIdx: 1
+      value: 60.000000
+    Port_Scale_N013:
+      typeIdx: 3
+      value: {x: 10.000000, y: 10.000000}
+    Port_Scale_N015:
+      typeIdx: 3
+      value: {x: 20.000000, y: 20.000000}
+    Port_Scale_N020:
+      typeIdx: 3
+      value: {x: 30.000000, y: 30.000000}
+    Port_Value_N023:
+      typeIdx: 5
+      value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    PreviewEnabled:
+      typeIdx: 0
+      value: 0
+    overrideTimeElapsed:
+      typeIdx: 1
+      value: 0.000000
+    overrideTimeEnabled:
+      typeIdx: 0
+      value: 0
+  Pass: !<reference> fd9d191c-f2d0-4593-876a-9173e0799532
