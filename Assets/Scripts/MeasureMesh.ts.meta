@@ -1,0 +1,45 @@
+- !<AssetImportMetadata/8698d60e-8876-4837-b016-662c1aa715de>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 3ca6df76-cb43-41d5-a1b3-47ce7b72eaf3
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 3ca6df76-cb43-41d5-a1b3-47ce7b72eaf3
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    TypeScriptAsset: !<own> 0f518f2a-3ec7-4e77-8405-2bea5ba8b011
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings/b3316655-42c5-4a98-bf5b-b672871f35b2>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/0f518f2a-3ec7-4e77-8405-2bea5ba8b011>
+  SvgIcon: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    directionVector: false
+    origin: false
+    precission: false
+    text: false
+  ScriptTypesHidden:
+    {}
+  DefaultScriptInputs:
+    - origin: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      text: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      directionVector: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
+      precission: !<float> 3.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input SceneObject origin {"hint":"Parent of both the rig and the mesh"}'
+    - '// @input int precission = 3 {"hint":"Precission supported by this widget"}'
+    - '// @input vec3 directionVector {"hint":"Direction Vector to extend towards"}'
+    - '// @input Component.Text text {"hint":"Parent of both the rig and the mesh"}'
