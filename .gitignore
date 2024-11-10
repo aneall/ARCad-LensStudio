@@ -8,3 +8,19 @@ jsconfig.json
 tsconfig.json
 .DS_Store
 # Shipped by Lens Studio
+
+# Python cache
+**/__pycache__/
+
+# Firmware
+# exclude sdk
+firmware/nRF5_SDK_17.1.0_ddde560/components
+firmware/nRF5_SDK_17.1.0_ddde560/config
+firmware/nRF5_SDK_17.1.0_ddde560/documentation
+firmware/nRF5_SDK_17.1.0_ddde560/examples
+firmware/nRF5_SDK_17.1.0_ddde560/external
+firmware/nRF5_SDK_17.1.0_ddde560/external_tools
+firmware/nRF5_SDK_17.1.0_ddde560/integration
+firmware/nRF5_SDK_17.1.0_ddde560/modules
+firmware/nRF5_SDK_17.1.0_ddde560/license.txt
+firmware/nRF5_SDK_17.1.0_ddde560/*.msi

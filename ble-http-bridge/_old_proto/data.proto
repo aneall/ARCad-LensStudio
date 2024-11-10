@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+message TriAxial {
+    float x = 1;
+    float y = 2;
+    float z = 3;
+}
+
+message Data {
+    int32 id = 1;
+    int32 value = 2;
+    TriAxial accel = 3;
+    TriAxial gyro = 4;
+    float timestamp = 5;
+    string opts = 6;
+}
