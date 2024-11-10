@@ -4226,6 +4226,8 @@
 - !<SceneObject/c6dbe0fe-48be-43f7-8770-c6af4eee1eb4>
   PrefabRemaps:
     - 8cddc564-77f6-4c3c-b951-85c8e1c8281d: c396f9ae-8a24-4314-b966-8518515c3a18
+    - 965f29eb-e957-4118-ba0a-6e29c612d068: a4d05ebb-90c9-4851-91ba-5a3015b331f4
+    - adbc7190-909a-4174-af59-22afe9313a1c: a10720c0-4eab-4a22-9689-cee0663adb41
     - b71b9680-3b1f-4dfb-9107-61f04bbbf664: 36e14768-841d-4d74-9474-9c99d820ad7a
     - c6dbe0fe-48be-43f7-8770-c6af4eee1eb4: 19130f70-4888-4eba-a48c-d9ff108e6ae7
   Name: SpherePrefab

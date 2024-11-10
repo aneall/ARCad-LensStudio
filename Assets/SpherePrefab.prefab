@@ -19,7 +19,9 @@
     []
   Components:
     - !<own> 36e14768-841d-4d74-9474-9c99d820ad7a
+    - !<own> a4d05ebb-90c9-4851-91ba-5a3015b331f4
     - !<own> c396f9ae-8a24-4314-b966-8518515c3a18
+    - !<own> a10720c0-4eab-4a22-9689-cee0663adb41
 - !<RenderMeshVisual/36e14768-841d-4d74-9474-9c99d820ad7a>
   PrefabRemaps:
     []
@@ -40,6 +42,78 @@
   BlendNormals: false
   BlendShapes:
     {}
+- !<ScriptComponent/a10720c0-4eab-4a22-9689-cee0663adb41>
+  PrefabRemaps:
+    []
+  Name: InteractableManipulation
+  Enabled: true
+  ScriptAsset: !<reference> 664b556b-1946-4c2c-866a-e675b4e86006
+  ScriptInputsDefault:
+    manipulateRootSceneObject: true
+    minimumScaleFactor: true
+    maximumScaleFactor: true
+    showStretchZProperties: true
+    zStretchFactorMin: true
+    zStretchFactorMax: true
+    useFilter: true
+    showFilterProperties: true
+    minCutoff: true
+    beta: true
+    dcutoff: true
+    showTranslationProperties: true
+    _enableXTranslation: true
+    _enableYTranslation: true
+    _enableZTranslation: true
+    showRotationProperties: true
+    _rotationAxis: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      manipulateRootSceneObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      minimumScaleFactor: 0.250000
+      maximumScaleFactor: !<float> 20.000000
+      enableTranslation: false
+      enableRotation: false
+      enableScale: false
+      enableStretchZ: false
+      showStretchZProperties: false
+      zStretchFactorMin: !<float> 1.000000
+      zStretchFactorMax: !<float> 12.000000
+      useFilter: true
+      showFilterProperties: false
+      minCutoff: !<float> 2.000000
+      beta: 0.015000
+      dcutoff: !<float> 1.000000
+      showTranslationProperties: false
+      _enableXTranslation: true
+      _enableYTranslation: true
+      _enableZTranslation: true
+      showRotationProperties: false
+      _rotationAxis: All
+  ScriptTypes:
+    "":
+      {}
+- !<ScriptComponent/a4d05ebb-90c9-4851-91ba-5a3015b331f4>
+  PrefabRemaps:
+    []
+  Name: Interactable
+  Enabled: true
+  ScriptAsset: !<reference> 652e631a-22d0-4941-9f74-2943df59f34c
+  ScriptInputsDefault:
+    targetingMode: true
+    enableInstantDrag: true
+    allowMultipleInteractors: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      targetingMode: !<float> 3.000000
+      enableInstantDrag: false
+      allowMultipleInteractors: true
+  ScriptTypes:
+    "":
+      {}
 - !<BodyComponent/c396f9ae-8a24-4314-b966-8518515c3a18>
   PrefabRemaps:
     []
@@ -60,6 +134,6 @@
   ShowCollider: false
   Dynamic: true
   BodySetting: Density
-  BodySettingValue: 1.000000
+  BodySettingValue: 0.000000
   Damping: 0.000000
   AngularDamping: 0.000000
