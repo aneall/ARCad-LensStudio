@@ -1,0 +1,51 @@
+- !<AssetImportMetadata/35b60532-e7b8-45fd-b6bd-9315b568b887>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 9a18cde2-27ba-4aa6-ba20-ffe8ffc4770d
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 9a18cde2-27ba-4aa6-ba20-ffe8ffc4770d
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    TypeScriptAsset: !<own> 300658cb-61c8-4d19-b1c8-5231cefd44b6
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings/5bbeb43e-82c9-4b60-8af8-da814d4c82dd>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/300658cb-61c8-4d19-b1c8-5231cefd44b6>
+  SvgIcon: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    _isToggledOn: false
+    _tapText: false
+    customFunctionForOnStateChanged: false
+    editEventCallbacks: false
+    onStateChangedFunctionNames: false
+  ScriptTypesHidden:
+    {}
+  DefaultScriptInputs:
+    - _isToggledOn: false
+      editEventCallbacks: false
+      customFunctionForOnStateChanged: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      onStateChangedFunctionNames: !<string[]>
+        []
+      _tapText: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input SceneObject _tapText {"hint":"The icon to be shown when the button is toggled on"}'
+    - '// @input bool _isToggledOn = false {"hint":"The initial state of the button, set to true if toggled on upon lens launch."}'
+    - "// @input bool editEventCallbacks = false {\"hint\":\"Enable this to add functions from another script to this component's callback events\"}"
+    - '// @ui {"widget":"group_start", "label":"On State Changed Callbacks", "showIf":"editEventCallbacks"}'
+    - '// @input Component.ScriptComponent customFunctionForOnStateChanged {"hint":"The script containing functions to be called on toggle state change"}'
+    - '// @input string[] onStateChangedFunctionNames {"hint":"The names for the functions on the provided script, to be called on toggle state change"}'
+    - '// @ui {"widget":"group_end"}'

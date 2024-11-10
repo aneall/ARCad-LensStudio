@@ -1,18 +1,18 @@
-- !<AssetImportMetadata/3d757bb1-3b35-4bad-9f51-445dd02465eb>
+- !<AssetImportMetadata/bde667f5-8e25-4b76-8710-7fde751cc98d>
   ImportedAssetIds:
-    JavaScriptAsset: !<reference> 3757f6ab-af62-4b01-81e7-c844786a568a
-  ImporterName: JavaScriptAssetImporter
-  PrimaryAsset: !<reference> 3757f6ab-af62-4b01-81e7-c844786a568a
+    TypeScriptAsset: !<reference> 944a571b-2918-41bd-b319-70acdef65eeb
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 944a571b-2918-41bd-b319-70acdef65eeb
   PackageType: NotAPackage
   PackagePolicy: CannotBeUnpacked
   AssetDataMap:
-    JavaScriptAsset: !<own> 74161144-7ec4-43d5-8447-7e4759f5b2a4
+    TypeScriptAsset: !<own> 1c9e79ce-7e2f-46bd-b58b-606b6439283c
   DependentFiles:
     []
-  ImporterSettings: !<AssetImporterSettings/5f9bd0ec-08ba-4c02-bab5-0243a76647d4>
+  ImporterSettings: !<AssetImporterSettings/0e307915-8616-4928-9a7f-3c61c8fa7cef>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-- !<ScriptAssetData/74161144-7ec4-43d5-8447-7e4759f5b2a4>
+- !<TypeScriptAssetData/1c9e79ce-7e2f-46bd-b58b-606b6439283c>
   SvgIcon: ""
   Description: ""
   InternalVersion: 0
@@ -24,13 +24,13 @@
   CurrentVisibility: Editable
   MaxVisibility: Editable
   ScriptInputsHidden:
-    WebsiteURL: false
     remoteServiceModule: false
   ScriptTypesHidden:
     {}
   DefaultScriptInputs:
     - remoteServiceModule: !<reference.RemoteServiceModule> 00000000-0000-0000-0000-000000000000
-      WebsiteURL: ""
   ScriptTypes:
     -
       {}
+  InputLines:
+    - // @input Asset.RemoteServiceModule remoteServiceModule

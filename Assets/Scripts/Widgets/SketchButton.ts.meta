@@ -1,0 +1,36 @@
+- !<AssetImportMetadata/0e357c2a-dbf3-4e52-8c66-ec2669bdd934>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> d036411c-498c-4133-ab1f-8cfa4c283e6c
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> d036411c-498c-4133-ab1f-8cfa4c283e6c
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    TypeScriptAsset: !<own> 3cf17f7d-facd-4aa8-a931-30cf2fc75793
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings/cee3842b-160a-4926-91e9-35d3b7644be4>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/3cf17f7d-facd-4aa8-a931-30cf2fc75793>
+  SvgIcon: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    SketchMode: false
+  ScriptTypesHidden:
+    {}
+  DefaultScriptInputs:
+    - SketchMode: 3
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input int SketchMode = 3 {"widget":"combobox", "values":[{"label":"None", "value":1}, {"label":"Square", "value":2}, {"label":"Triangle", "value":3}, {"label":"Circle", "value":4}, {"label":"Cylinder", "value":5}, {"label":"Cube", "value":6}]}'
