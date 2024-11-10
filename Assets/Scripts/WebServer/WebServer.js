@@ -35,6 +35,10 @@ function makeRequest() {
       JsonObject = JSON.parse(response.body);
       ParseJson(JsonObject);
     }
+    else
+    {
+      print('err: ' + response.statusCode); 
+    }
   });
 }
 

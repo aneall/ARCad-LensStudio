@@ -1,5 +1,8 @@
 import {Interactable} from "../Interaction/Interactable/Interactable"
 import {ToggleButton} from "../UI/ToggleButton/ToggleButton"
+import {TapButton} from "Scripts/TapButton"
+
+
 
 /*
  * PinchButton provides basic pinch button functionality for the prefab pinch button.
@@ -45,9 +48,15 @@ export class ToggleFeedback extends BaseScriptComponent {
   }
 
   init() {
-    this.toggleButton = this.getSceneObject().getComponent(
-      ToggleButton.getTypeName()
-    )
+    var button = this.getSceneObject().getComponent(ToggleButton.getTypeName());
+    if(button != null)
+    {
+      this.toggleButton = button;
+    }
+    else
+    {
+      this.destroy();
+    }
 
     this.interactable = this.getSceneObject().getComponent(
       Interactable.getTypeName()
