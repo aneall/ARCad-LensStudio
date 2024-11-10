@@ -62,7 +62,7 @@ export class MeasureMesh extends BaseScriptComponent {
           renderMesh.mesh = builder.getMesh();
           builder.updateMesh();
             
-          this.text.text = extentPosition.distance(originPosition).toPrecision(this.precission).toString();
+          this.text.text = newSize.toString();
           var midpoint = originPosition.add(extentPosition).uniformScale(0.5);
           this.text.getTransform().setLocalPosition(midpoint);
     }

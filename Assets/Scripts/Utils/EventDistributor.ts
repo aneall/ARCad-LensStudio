@@ -1,4 +1,5 @@
 import {WebServer2} from 'Scripts/WebServer/WebServer2';
+import { MeasureMesh } from 'Scripts/Widgets/MeasureMesh';
 
 
 @component
@@ -18,6 +19,13 @@ export class EventDistributor extends BaseScriptComponent {
     @allowUndefined
     WebServerRef: WebServer2
     
+
+    @input()
+    @hint("The icon to be shown when the button is toggled on")
+    @allowUndefined
+    measureMesh: MeasureMesh
+
+
     // put your class variables here
     onAwake()
     {
@@ -28,6 +36,7 @@ export class EventDistributor extends BaseScriptComponent {
     {
         print(CaliperData)    
         this.CaliperSize = CaliperData
+        this.measureMesh.SetMeasureWidgetSize(CaliperData);
     }
 
     public SetSketchState(State)

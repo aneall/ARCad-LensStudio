@@ -24,13 +24,16 @@
   CurrentVisibility: Editable
   MaxVisibility: Editable
   ScriptInputsHidden:
+    eventDistro: false
     remoteServiceModule: false
   ScriptTypesHidden:
     {}
   DefaultScriptInputs:
     - remoteServiceModule: !<reference.RemoteServiceModule> 00000000-0000-0000-0000-000000000000
+      eventDistro: !<MappingBased.EventDistributor> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
     - // @input Asset.RemoteServiceModule remoteServiceModule
+    - // @input EventDistributor eventDistro

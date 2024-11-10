@@ -59,6 +59,10 @@ export class WebServer2 extends BaseScriptComponent {
               var JsonObject = JSON.parse(response.body);
               this.ParseJson(JsonObject);
             }
+            else
+            {
+                print(response.statusCode)
+            }
           });
     }
   }
