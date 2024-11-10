@@ -1,4 +1,4 @@
-import {SketchStates} from 'Scripts/Utils/EventDistributor';
+import {ETranslate, SketchStates} from 'Scripts/Utils/EventDistributor';
 import {EventDistributor} from 'Scripts/Utils/EventDistributor';
 import {ToggleButton} from "SpectaclesInteractionKit/Components/UI/ToggleButton/ToggleButton"
 
@@ -37,11 +37,11 @@ export class SketchButton extends BaseScriptComponent {
         this.toggleButton.onStateChanged.add((isToggledOn) => {
           if (isToggledOn)
           {
-            eventDistributor.SetSketchState(this.SketchMode);
+            eventDistributor.SetTranslationOffset(this.SketchMode);
           }
           else
           {
-            eventDistributor.SetSketchState(SketchStates.None);
+            eventDistributor.SetTranslationOffset(ETranslate.None);
           }
       })
       }

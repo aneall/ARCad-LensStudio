@@ -45,6 +45,11 @@ eventDistributor : EventDistributor
   }
 
   OffsetByDirection(State: any, CaliperSize: number) {
+    if (CaliperSize == null || CaliperSize == 0) {
+      CaliperSize = 45;
+    } 
+    print(CaliperSize);    
+    print("AHHHHHHHHHHHHHH");
     switch (State - 1) {
       case ETranslate.None:
         break;
@@ -73,12 +78,26 @@ eventDistributor : EventDistributor
   }
 
   resetMesh() {
-    this.builder.eraseIndices(0, this.builder.getIndicesCount());
-    this.builder.eraseVertices(0, this.builder.getVerticesCount());
+    const indCt = this.builder.getIndicesCount();
+    const vertCt = this.builder.getVerticesCount()
+    if (indCt != 0) { 
+      this.builder.eraseIndices(0, indCt);
+    }
+    if (indCt != 0) {  
+      this.builder.eraseVertices(0, vertCt);
+    }
+      
     this.setMeshRender();
+
+    for (let i = 0; i < this.PointSpheres.length; i++) {
+      this.PointSpheres[i].destroy();
+    }
+    this.PointSpheres = [];
+
   }
 
   createPrimitive(SketchState: SketchStates, size: number) {
+    this.resetMesh();
     switch (SketchState - 1) {
       case SketchStates.Square:
         this.create2DSquare(size);
@@ -93,6 +112,7 @@ eventDistributor : EventDistributor
         print("wtf");
     }
     this.setMeshRender();
+    this.setupColliders();
   }
 
   private create2DSquare(size: number) {
@@ -141,8 +161,8 @@ eventDistributor : EventDistributor
     ];
     this.builder.appendIndices(indices);
 
-    const faceIndices = [0, 1, 2, 3];
-    faceIndices.forEach(i => this.selections.push(i));
+    // const faceIndices = [0, 1, 2, 3];
+    // faceIndices.forEach(i => this.selections.push(i));
   }
 
   private createSpheresAtVertices(vertices: number[]) {
@@ -159,12 +179,45 @@ eventDistributor : EventDistributor
     this.builder.updateMesh();
   }
 
+  private setupColliders()
+  {
+    for (var i = 0; i < this.PointSpheres.length; i++) {
+      const instance = this.PointSpheres[i];
+      print(instance.getTransform().getWorldPosition());
+      let index = 0;
+      const body = instance.getComponent("Physics.BodyComponent");
+      if (body !== null) {
+        body.onCollisionEnter.add((e: CollisionEnterEventArgs) => 
+          {
+          const collision = e.collision;
+          const contact = collision.contacts[0].position;
+          let minVal = 5000;
+    
+          for (let j = 0; j < this.PointSpheres.length; j++) {
+            const dist = this.distance(this.PointSpheres[j].getTransform().getWorldPosition(), contact);
+            if (minVal > dist) {
+              minVal = dist;
+              index = j;
+            }
+          }
+        
+    
+          this.selections.push(index);
+          const scale = this.PointSpheres[index].getTransform().getWorldScale();
+          const newScale = new vec3(scale.x * 2, scale.y * 2, scale.z * 2);
+          this.PointSpheres[index].getTransform().setWorldScale(newScale);
+        });
+      }
+    }
+  }
+
   private distance(v1: vec3, v2: vec3): number {
     const dx = v1.x - v2.x;
     const dy = v1.y - v2.y;
     const dz = v1.z - v2.z;
     return Math.sqrt(dx * dx + dy * dy + dz * dz);
   }
+  
 }
 
 // const manipulator = new MeshBuilding2();

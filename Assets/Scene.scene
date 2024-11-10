@@ -8175,7 +8175,7 @@
     - b71b9680-3b1f-4dfb-9107-61f04bbbf664: 36e14768-841d-4d74-9474-9c99d820ad7a
     - c6dbe0fe-48be-43f7-8770-c6af4eee1eb4: 19130f70-4888-4eba-a48c-d9ff108e6ae7
   Name: SpherePrefab
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}

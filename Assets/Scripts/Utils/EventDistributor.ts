@@ -32,15 +32,15 @@ export class EventDistributor extends BaseScriptComponent {
 
     public SetCaliperSize(CaliperData)
     {
-        print(CaliperData)    
-        this.CaliperSize = CaliperData
+        print(CaliperData); 
+        this.CaliperSize = CaliperData;     
     }
 
     public SetSketchState(State)
     {
         this.SketchState = State;
         print("Sketch State" + this.SketchState);
-        this.meshBuilder.createPrimitive(State, 20);
+        this.meshBuilder.createPrimitive(State, 5);
     } 
 
     
@@ -68,6 +68,7 @@ export class EventDistributor extends BaseScriptComponent {
 
     public SetTranslationOffset(State)
     {
+        print("AHGDJHDSGJHSDG");
         this.meshBuilder.OffsetByDirection(State, this.CaliperSize);
     }
 }
