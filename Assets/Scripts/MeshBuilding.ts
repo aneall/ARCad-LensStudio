@@ -39,9 +39,12 @@ eventDistributor : EventDistributor
 
   translateSelections(dir: vec3, scale: number) {
     this.selections.forEach(index => {
+      print(index);
       const pos = this.PointSpheres[index].getTransform().getWorldPosition();
+      print(pos);
       const arr = [pos.x + dir.x * scale, pos.y + dir.y * scale, pos.z + dir.z * scale];
       const vec = new vec3(pos.x + dir.x * scale, pos.y + dir.y * scale, pos.z + dir.z * scale);
+      print(vec);
       this.PointSpheres[index].getTransform().setWorldPosition(vec);
       this.builder.setVertexInterleaved(index, arr);
     });
@@ -50,7 +53,7 @@ eventDistributor : EventDistributor
 
   OffsetByDirection(State: any, CaliperSize: number) {
     if (CaliperSize == null || CaliperSize == 0) {
-      CaliperSize = 45;
+      CaliperSize = 45 / 10;
     } 
     print(CaliperSize);    
     print("AHHHHHHHHHHHHHH");
@@ -59,14 +62,19 @@ eventDistributor : EventDistributor
         break;
       case ETranslate.Down:
         this.translateSelections(new vec3(0, 0, 1), CaliperSize); // z
+        break;
       case ETranslate.Up:
         this.translateSelections(new vec3(0, 0, -1), CaliperSize); // -z
+        break;
       case ETranslate.Left:
         this.translateSelections(new vec3(-1, 0, 0), CaliperSize); // -x
+        break;
       case ETranslate.Right:
         this.translateSelections(new vec3(1, 0, 0), CaliperSize); // x
+        break;
       default:
         print("wtf");
+        break;
     }
   }
 
