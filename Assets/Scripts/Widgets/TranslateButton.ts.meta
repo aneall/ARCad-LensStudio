@@ -1,0 +1,36 @@
+- !<AssetImportMetadata/48f86bbc-44f1-4039-b199-4a41cdea513d>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 07b6c76f-a49a-4240-a717-0d6662fdf020
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 07b6c76f-a49a-4240-a717-0d6662fdf020
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    TypeScriptAsset: !<own> 9ebb5a5d-8d84-4594-8004-eeb8caf18252
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings/10dfeb0d-9466-44cd-8dc8-c68da2237a9c>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/9ebb5a5d-8d84-4594-8004-eeb8caf18252>
+  SvgIcon: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    SketchMode: false
+  ScriptTypesHidden:
+    {}
+  DefaultScriptInputs:
+    - SketchMode: 3
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input int SketchMode = 3 {"widget":"combobox", "values":[{"label":"None", "value":1}, {"label":"Up", "value":2}, {"label":"Down", "value":3}, {"label":"Left", "value":4}, {"label":"Right", "value":5}]}'

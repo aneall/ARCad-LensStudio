@@ -1,25 +1,23 @@
-import {ManipulateStates} from 'Scripts/Utils/EventDistributor';
+import {SketchStates} from 'Scripts/Utils/EventDistributor';
 import {EventDistributor} from 'Scripts/Utils/EventDistributor';
 import {ToggleButton} from "SpectaclesInteractionKit/Components/UI/ToggleButton/ToggleButton"
 
 @component
-export class ManipulationButton extends BaseScriptComponent {
+export class SketchButton extends BaseScriptComponent {
 
     /**
    */
     @input("int")
     @widget(
       new ComboBoxWidget([
-        new ComboBoxItem("None",      1),
-        new ComboBoxItem("Select",    2),
-        new ComboBoxItem("Translate", 3),
-        new ComboBoxItem("Scale",     4),
-        new ComboBoxItem("Extrude",   5),
-        new ComboBoxItem("Clear",     6),
-
+        new ComboBoxItem("None", 1),
+        new ComboBoxItem("Up", 2),
+        new ComboBoxItem("Down", 3),
+        new ComboBoxItem("Left", 4),
+        new ComboBoxItem("Right", 5),
       ])
     )
-    ManipulateState: number = 3
+    SketchMode: number = 3
 
     private toggleButton: ToggleButton
     
@@ -39,11 +37,11 @@ export class ManipulationButton extends BaseScriptComponent {
         this.toggleButton.onStateChanged.add((isToggledOn) => {
           if (isToggledOn)
           {
-            eventDistributor.SetManipulationState(this.ManipulateState - 1);
+            eventDistributor.SetSketchState(this.SketchMode);
           }
           else
           {
-            eventDistributor.SetManipulationState(ManipulateStates.None);
+            eventDistributor.SetSketchState(SketchStates.None);
           }
       })
       }

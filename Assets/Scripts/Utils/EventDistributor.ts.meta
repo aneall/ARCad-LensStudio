@@ -26,14 +26,17 @@
   ScriptInputsHidden:
     WebServerRef: false
     _tapText: false
+    meshBuilder: false
   ScriptTypesHidden:
     {}
   DefaultScriptInputs:
     - _tapText: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       WebServerRef: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      meshBuilder: !<MappingBased.MeshBuilding> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
     - '// @input SceneObject _tapText {"hint":"The icon to be shown when the button is toggled on"}'
     - '// @input Component.ScriptComponent WebServerRef {"hint":"The icon to be shown when the button is toggled on"}'
+    - '// @input MeshBuilding meshBuilder {"hint":"Mesh builder"}'

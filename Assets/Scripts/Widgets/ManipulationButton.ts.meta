@@ -33,4 +33,4 @@
     -
       {}
   InputLines:
-    - '// @input int ManipulateState = 3 {"widget":"combobox", "values":[{"label":"None", "value":1}, {"label":"Select", "value":2}, {"label":"Translate", "value":3}, {"label":"Scale", "value":4}, {"label":"Extrude", "value":5}]}'
+    - '// @input int ManipulateState = 3 {"widget":"combobox", "values":[{"label":"None", "value":1}, {"label":"Select", "value":2}, {"label":"Translate", "value":3}, {"label":"Scale", "value":4}, {"label":"Extrude", "value":5}, {"label":"Clear", "value":6}]}'

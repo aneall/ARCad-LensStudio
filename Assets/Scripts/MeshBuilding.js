@@ -1,6 +1,8 @@
 //@input Component.MeshVisual meshVisual
 //@input Asset.ObjectPrefab spherePrefab
 
+const { SketchStates } = require("../../Cache/0e63b6a1-6bba-4085-9c3c-a0a2b042dcb0/ec958a7ac084cb9f115f52c7de8716c0/Data/73b55c91345dd26c050bdb885d5be9d9/EventDistributor");
+
 var builder = new MeshBuilder([{ name: 'position', components: 3 }]);
 var origin = new vec3(0, 0, 0);
 
@@ -25,6 +27,11 @@ var selections = []; // stores indices of vertices selected
 
 function clearSelection() {
   selections = [];
+  // resets pointspheres to og scale
+  var ogscale = new vec3(2, 2, 2);
+  for (let i = 0; i < PointSpheres.length; i++) {
+    PointSpheres[i].getTransform().setWorldScale(scale);
+  }
 }
 
 /*
@@ -61,15 +68,24 @@ function resetMesh() {
 }
 
 function createPrimitive(shape, size) {
-  if (shape == "square") {
+  if (SketchState == SketchStates.Square) {
     create2DSquare(size);
-  } else if (shape == "triangle") {
+  } else if (SketchState == SketchStates.Triangle) {
     create2DTriangle(size);
-  } else if (shape == "cube") {
+  } else if (SketchState == SketchStates.Cube) {
     createCube(size);
   } else {
     print("wtf");
   }
+  // if (shape == "square") {
+  //   create2DSquare(size);
+  // } else if (shape == "triangle") {
+  //   create2DTriangle(size);
+  // } else if (shape == "cube") {
+  //   createCube(size);
+  // } else {
+  //   print("wtf");
+  // }
   setMeshRender();
 }
 

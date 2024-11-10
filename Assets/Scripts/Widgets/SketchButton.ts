@@ -39,12 +39,10 @@ export class SketchButton extends BaseScriptComponent {
           if (isToggledOn)
           {
             eventDistributor.SetSketchState(this.SketchMode);
-            eventDistributor.QuerryServer(true);
           }
           else
           {
             eventDistributor.SetSketchState(SketchStates.None);
-            eventDistributor.QuerryServer(false);
           }
       })
       }

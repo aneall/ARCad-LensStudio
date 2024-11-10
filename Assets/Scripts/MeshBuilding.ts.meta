@@ -1,0 +1,42 @@
+- !<AssetImportMetadata/d7e6a4c8-818f-44c3-aa5d-89cd81e50967>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 45aa4c6c-9a4f-4931-aaeb-c6d2d996a722
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 45aa4c6c-9a4f-4931-aaeb-c6d2d996a722
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    TypeScriptAsset: !<own> 998de26e-643e-4961-af2e-cac2586b4dbe
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings/92ea7d93-e042-4540-85c8-8bdf98160587>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/998de26e-643e-4961-af2e-cac2586b4dbe>
+  SvgIcon: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    eventDistributor: false
+    meshVisual: false
+    spherePrefab: false
+  ScriptTypesHidden:
+    {}
+  DefaultScriptInputs:
+    - meshVisual: !<reference.RenderMeshVisual> 00000000-0000-0000-0000-000000000000
+      spherePrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+      eventDistributor: !<MappingBased.EventDistributor> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input Component.RenderMeshVisual meshVisual
+    - // @input Asset.ObjectPrefab spherePrefab
+    - // @input EventDistributor eventDistributor

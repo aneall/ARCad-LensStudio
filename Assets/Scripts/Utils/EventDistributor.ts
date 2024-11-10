@@ -1,3 +1,4 @@
+import { MeshBuilding2 } from 'Scripts/MeshBuilding';
 import {WebServer2} from 'Scripts/WebServer/WebServer2';
 
 
@@ -17,6 +18,11 @@ export class EventDistributor extends BaseScriptComponent {
     @hint("The icon to be shown when the button is toggled on")
     @allowUndefined
     WebServerRef: WebServer2
+
+    @input
+    @hint("Mesh builder")
+    @allowUndefined
+    meshBuilder : MeshBuilding2
     
     // put your class variables here
     onAwake()
@@ -34,8 +40,7 @@ export class EventDistributor extends BaseScriptComponent {
     {
         this.SketchState = State;
         print("Sketch State" + this.SketchState);
-        // send to anyone down stream that cares about this...
-        //@felicity
+        this.meshBuilder.createPrimitive(State, 20);
     } 
 
     
@@ -60,15 +65,20 @@ export class EventDistributor extends BaseScriptComponent {
             this.WebServerRef.TurnOff();
         }
     }
+
+    public SetTranslationOffset(State)
+    {
+        this.meshBuilder.OffsetByDirection(State, this.CaliperSize);
+    }
 }
 
 export enum SketchStates {
-    None,
-    Square,
-    Triangle,
-    Circle,
-    Cylinder,
-    Cube,
+    None = 0,
+    Square = 1,
+    Triangle = 2,
+    Circle = 3,
+    Cylinder = 4,
+    Cube = 5,
   }
 
 
@@ -78,4 +88,13 @@ export enum ManipulateStates {
     Translate,
     Scale,
     Extrude,
+    Clear,
+}
+
+export enum ETranslate {
+    None, 
+    Up,
+    Down,
+    Left,
+    Right
 }
